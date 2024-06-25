@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Container holding the image and the text */
+      .container {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      /* Bottom left text */
+      .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+      }
+
+      /* Top left text */
+      .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+      }
+
+      /* Top right text */
+      .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+      }
+
+      /* Bottom right text */
+      .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+      }
+
+      /* Centered text */
+      .centered {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .anh {
+        filter: brightness(50%);
+      }
+      .roboto-light {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+      /* Add a black background color to the top navigation */
+      .topnav {
+        background-color: white;
+        overflow: hidden;
+      }
+
+      /* Style the links inside the navigation bar */
+      .topnav a {
+        color: #333;
+
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        border-style: solid;
+        border-color: whitesmoke;
+      }
+
+      /* Change the color of links on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Add a color to the active/current link */
+      .topnav a.active {
+        color: #333;
+      }
+      .roboto {
+        font-family: "Roboto", sans-serif;
+        font-weight: 200px;
+        font-style: normal;
+        color: black;
+      }
+      .seet {
+        font-size: 10px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        overflow: hidden;
+        border-style: solid;
+        border-color: whitesmoke;
+      }
+      .line {
+        border-style: solid;
+        border-color: whitesmoke;
+      }
+      .nav {
+        color: #333;
+        text-decoration: none;
+
+        text-align: center;
+
+        text-decoration: none;
+        overflow: hidden;
+      }
+
+      .grid2 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        color: black;
+        line-height: 30px;
+        background-color: #ddd;
+        margin: 40px;
+        
+      }
+      .sss {
+        line-height: 20px;
+        margin: 20px;
+        text-align: left;
+        font-family: "Roboto", sans-serif;
+        font-weight: 200px;
+        font-style: normal;
+        color: black;
+        
+      }
+      .left{
+        border-style: solid;
+        border-left: #ddd;
+        border-bottom: #ddd;
+        border-top: #ddd;
+        text-align: left;
+        border-color: grey;
+        margin: 20px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 200px;
+        font-style: normal;
+        color: black;
+      }
+      .grid3{
+        display: grid;
+        grid-template-columns: 30% 30% 30% ;
+        
+        grid-gap: 20px;
+        text-align: center;
+        margin: 10%;
+        
+      }
+      .lineup{
+        border-style: solid;
+        border-color: #ddd;
+        color: #333;
+      }
+      .line {
+        background: #199cdb;
+        display: inline-block;
+        height: 4px;
+        margin-right: 10px;
+        width: 40px;
+        border-color: white;
+      }
+      .lineup2{
+        background: grey;
+        display: inline-block;
+        height: 4px;
+        margin-right: 10px;
+        width: 40px;
+        border-color: white;
+      }
+
+      .grid4{
+        display: grid;
+        grid-template-columns:75% 25%;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100px;
+        font-style: normal;
+        color: black;
+        margin: 10px;
+        
+      }
+      .p{
+        text-align: left;
+        margin-left: 10px;
+      }
+      .center {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+
+        border-style: solid;
+        border-color: #199cdb;
+        margin-bottom: -50%;
+        margin-right: 2px;
+        margin: 8px;
+        padding: 10px;
+      }
+      .grid5{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto;
+
+      }
+      .center{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: aqua;
+        border-color: aqua;
+        margin: 10px;
+      }
+      .grid6{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        
+      }
+      .block{
+        display: flex;
+        text-align: left;
+        border-style: solid;
+        border-color:  #d6c08d;
+        border-top: #d6c08d;
+        border-left: #d6c08d;
+        border-bottom: #d6c08d;
+        margin-bottom: 10px;
+      }
+      .light{
+        color: grey;
+        margin-left: 10px;
+      }
+      .block2{
+        display: flex;
+        text-align: left;
+        
+      }
+      .grid7{
+        display: inline-block;
+        grid-template-columns: 900px;
+        grid-template-rows: 900px;
+        text-align: left;
+        font-size: 17px;
+      }
+      .style{
+        
+        display: flex;
+        
+      }
+      .width{
+        width: 1000px;
+        height: 100px;
+        border-style: solid;
+        border-right: #333;
+        border-top: #333;
+        border-left: #333;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <img
+        src="hinh-anh-chup-sau-lung-boy-cuc-chat_033821480.jpg"
+        alt="anh"
+        style="width: 100%"
+        class="anh"
+      />
+      <div class="roboto-light">
+        <div class="centered">
+          <h1>NGUYỄN LÊ THIÊN BẢO</h1>
+          <p>Fullstack Deverloper</p>
+        </div>
+      </div>
+      <div class="topnav">
+        <div class="grid">
+          <a href="#thongtin">
+            <p class="nav">
+              <i
+                class="fa fa-user"
+                style="color: aqua"
+                ;
+                aria-hidden="true"
+              ></i>
+              Thông tin
+            </p>
+          </a>
+
+          <a href="#lylich">
+            <p class="nav">
+              <i class="fa fa-file" style="color: aqua"></i>
+              Lý lịch
+            </p>
+          </a>
+
+          <a href="#CV">
+            <p class="nav">Nguyễn Lê Thiên Bảo</p>
+            <div class="seet">
+              <p class="nav">Fullstack Deverloper</p>
+            </div>
+          </a>
+
+          <a href="#chungchi">
+            <p class="nav">
+              <i class="fa fa-envelope-o" style="color: aqua"></i>
+              Chứng chỉ
+            </p>
+          </a>
+
+          <a href="#duan">
+            <p class="nav">
+              <i class="material-icons" style="color: aqua">star</i>
+              Dự án
+            </p>
+          </a>
+        </div>
+      </div>
+      
+      <div class="grid2">
+        <div class="left">
+          <h1>MỤC TIÊU NGHỀ NGHIỆP</h1>
+          <p>
+            Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh Nghiệp
+            của FUNiX. Em mong muốn mình sẽ được làm việc với vị trí Fullstack
+            Developer, có thể vận dụng những kiến thức đã được trau dồi và không
+            ngừng học hỏi để phát triển bản thân, cũng như hoàn thành tốt nhất
+            công việc được giao.
+          </p>
+        </div>
+
+        <div class="sss">
+          <h1>THÔNG TIN CÁ NHÂN</h1>
+          <b><p>Ngày sinh</b> :24/11/2008</p>
+          <b><p>Số điện thoại</b> :0812004416</p>
+          <b><p>Địa chỉ</b> :Bình Dương, Việt Nam</p>
+          <b><p>Giới tính</b> :Nam</p>
+          <b><p>Email</b> :nguyenlethienbaortx@gmail.com</p>
+        
+        </div>
+      </div>
+     
+   
+      
+<div class="grid3">
+<div class="lineup">
+  <div class="grid4">
+    <h1>Kinh nghiệm</h1>
+      <i class="fa fa-briefcase" style="font-size:70px"></i>
+      
+    </div>
+    <div class="roboto">
+    <p class="p">
+      - Chưa có kinh nghiệm thực tế nhưng đã hoàn thành khóa học CS của
+      funix
+    </p>
+  </div>
+</div>
+<div class="lineup">
+  <div class="grid4">
+    <h1>Học vấn</h1>
+      <i class="fa fa-pencil" style="font-size:70px"></i>
+      
+    </div>
+    <div class="p">
+      <h4 class="roboto">FUNIX</h4>
+      <i><p class="roboto">06/2021-05/2021</p></i>
+      <p class="roboto">- Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack</p>
+      <p class="roboto">- GPA: 9/10</p>
+  </div>
+</div>
+<div class="lineup">
+  <div class="grid4">
+    <h1>Hoạt Động</h1>
+      <i class="fa fa-briefcase" style="font-size:70px"></i>
+
+      
+    </div>
+    <div class="p">
+      <h4 class="roboto"> FPT Edu Hackaton 2019</h4>
+      <i class="roboto">03/2019-05/2019</i>
+      <p class="roboto">- Giải 3 bảng A</p>
+      <p class="roboto">- Đề tài: Trang wed về phân loại rác thải</p>
+      <h4 class="roboto"> Câu lạc bộ sinh viên IT</h4>
+      <i class="roboto">08/2018-08/2019</i>
+      <p class="roboto">- Trưởng ban chuyên môn</p>
+      <h4 class="roboto"> Câu lạc bộ văn hóa IT</h4>
+      <i class="roboto">08/2016</i>
+      <p class="roboto">- Hỗ trợ tổ chức tuần lễ văn hóa Việt Nam - Nhật Bản</p>
+    </div>
+  
+</div>
+<div class="lineup">
+  <div class="grid4">
+    <h1>Sở Thích</h1>
+    <i class="fa fa-briefcase" style="font-size:70px"></i>
+    
+  </div>
+  
+  <div class="grid5">
+    <div class="center">
+      <i class="fa fa-mixcloud"></i>
+      
+
+    </div>
+    <div class="center">
+      <i class="fa fa-gamepad"></i>
+
+    </div>
+    <div class="center">
+      <i class="fa fa-umbrella"></i>
+
+    </div>
+    <div class="center">
+      <i class="fa fa-american-sign-language-interpreting"></i>
+
+    </div>
+    <P>Âm nhạc</P>
+    <P>Chơi Game</P>
+    <P>Du lịch</P>
+    <P>Nấu ăn</P>
+    
+  
+
+  </div>
+</div>
+<div class="lineup">
+  <div class="grid4">
+    <h1>Ngôn ngữ</h1>
+    <i class="material-icons" style="font-size:70px">mic_none</i>
+  </div>
+  <div class="p">
+    <b><p>English - IETLS 7.0</p></b>
+    <div class="line">
+    </div>
+    <div class="line">
+    </div>
+    <div class="lineup2">
+    </div>
+    
+  </div>
+  <div class="p">
+    <b><p>JANPANESE - JLPT N4</p></b>
+    <div class="line">
+    </div>
+    <div class="lineup2">
+    </div>
+    <div class="lineup2">
+    </div>
+  </div>
+</div>
+<div class="lineup">
+  <div class="grid4">
+    <h1>Kỹ Năng</h1>
+    <i class="fa fa-gear" style="font-size:70px"></i>
+  </div>
+  <div class="p">
+    <p><b>HTML/CSS: Fundamental</b></p>
+    <p class="line"></p>
+    <p class="lineup2"></p>
+    <p class="lineup2"></p>
+    <p><b>Javascirpt: Intermediate</b></p>
+    <p class="line"></p>
+    <p class="line"></p>
+    <p class="lineup2"></p>
+
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+    
+
+
+  
+</div>
+<div>
+  <h1>Chứng chỉ - Giải thưởng</h1>
+  <p class="lineup"></p>
+</div>
+<div class="grid6">
+  
+  <div class="block">
+    
+      <img src="cc-mon.webp" alt="Thẻ" width="200px">
+  <div>
+    <p class="light">CHỨNG CHỈ LẬP TRÌNH WED - FUNIX</p>
+    <p class="light">- Chứng chỉ thuộc chương trình CCDN</p>
+    <p class="light">- GPA: 8.6</p>
+    
+  </div>
+    
+    
+  </div>
+  <div class="block2">
+    <img src="cc-mon.webp" alt="Thẻ" width="200px">
+  <div >
+    <p class="light">CHỨNG CHỈ LẬP Javascirpt - FUNIX</p>
+    <p class="light">- Chứng chỉ thuộc chương trình CCDN</p>
+    <p class="light">- GPA: 8.9</p>
+  </div>
+  
+  <div>
+   
+    </div>
+   
+  </div>
+
+    
+  
+  
+  <div class="block2">
+    
+    <div >
+      <img src="cc-mon.webp" alt="thẻ" width="200px">
+    </div>
+    
+    <div class="block2">
+      <div>
+        <p class="light">CHỨNG CHỈ THIẾT KẾ DATABASE - FUNIX</p>
+    <p class="light">- Chứng chỉ thuộc chương trình CCDN</p>
+    <p class="light">- GPA: 8.0</p>
+      </div>
+
+    </div>
+    
+  </div>
+  
+</div>
+
+<H1>Dự án</H1>
+<p class="lineup"></p>
+<div style="text-align: center;">
+  <div class="grid7" style="border-style: solid;">
+   
+      <img src="1.png" alt="" width="900px">
+      <b ><p style="font-size: 24px; text-align: left;">CV cá nhân</p></b>
+      <div class="grid7">
+      <div class="style">
+        <b class="p"><p class="p" style="background-color: aqua; border-radius: 30%;font-size: 24px; text-align: left;">2021</p></b>
+        <p style="margin-left: 20px; margin-top: 25px;"><i class="fa fa-user" style="font-size: 24px;"></i></p>
+        <p style="margin-left: 20px; margin-top: 25px;">FUNIX</p>
+        <i class="fa fa-lightbulb-o" style="font-size:24px;margin-left: 20px; margin-top: 25px;"></i>
+        <p style="font-size:24px;margin-left: 20px; margin-top: 20px;">Deverloper</p>
+      </div>
+        <table  class="width">
+          <tr >
+            <td>Mô tả</td>
+            <td>-Trang wed CV cá nhân online. Gồm các thông tin cá nhân như kỹ năng nghề nghiệp</td>
+          </tr>
+          
+        </table>
+        <table  class="width">
+          <tr >
+            <td>Nhiệm vụ</td>
+            <td>- Phát triển code - review code - tối ưu code - Xử lý lỗi</td>
+          </tr>
+          
+        </table>
+        <table  class="width">
+          <tr >
+            <td>Công nghệ</td>
+            <td>-HTML, CSS</td>
+          </tr>
+          
+        </table>
+      </div>
+    </div>
+    </div>
+  
+
+</html>  
+</body>
+    
