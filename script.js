@@ -1,6 +1,5 @@
 const btnSubmit = document.querySelector("#button");
 
-ps.style.display = "none";
 btnSubmit.addEventListener("click", function () {
   const emailValue = document.getElementById("email").value.toLocaleLowerCase();
 
@@ -16,7 +15,7 @@ btnSubmit.addEventListener("click", function () {
   const submitEmail = document.querySelector(".submit-email");
 
   if (check) {
-    ps.style.display = "block";
+    ps.style.display = "grid";
 
     submitEmail.style.display = "none";
     errormail.innerHTML = "";
@@ -31,7 +30,7 @@ btnSubmit.addEventListener("click", function () {
   const submitEmail = document.querySelector(".submit-email");
 
   if (check) {
-    ps.style.display = "block";
+    ps.style.display = "grid";
 
     submitEmail.style.display = "none";
     errormail.innerHTML = "";
